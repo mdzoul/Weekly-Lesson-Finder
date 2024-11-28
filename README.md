@@ -18,7 +18,7 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/weekly-lesson-finder.git
+   git clone https://github.com/mdzoul/weekly-lesson-finder.git
    cd weekly-lesson-finder
    ```
 
