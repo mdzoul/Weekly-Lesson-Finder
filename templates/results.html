@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Plan Results</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson Plan Results</h1>
+        {% if results %}
+            {% for result in results %}
+                <div class="grade">
+                    <h2>Grade: {{ result['Grade'] }}</h2>
+                    <div class="lesson">
+                        <h3>Week Number: {{ result['Week Number'] }}</h3>
+                        <p><strong>Topic:</strong> {{ result['Topic'] }}</p>
+                        <p><strong>Lesson Title:</strong> {{ result['Lesson Title'] }}</p>
+                        <p><strong>Objective:</strong> {{ result['Objective'] }}</p>
+                        <p><strong>Content:</strong> {{ result['Content'] }}</p>
+                        <p><strong>Type of Activity:</strong> {{ result['Type of Activity'] }}</p>
+                        <p><strong>Activities:</strong> {{ result['Activities'] }}</p>
+                    </div>
+                    <a href="/" class="back-button">Back to Search</a>
+                    <hr class="dotted">
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

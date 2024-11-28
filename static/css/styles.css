@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.grade {
+    margin-top: 20px;
+}
+
+.grade h2 {
+    margin-bottom: 10px;
+}
+
+.lesson {
+    margin-bottom: 15px;
+}
+
+.lesson h3 {
+    margin: 5px 0;
+}
+
+.lesson p {
+    margin: 2px 0;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+hr.dotted {
+    border: none;
+    border-top: 3px dotted #bbb;
+  }
+  
+  
