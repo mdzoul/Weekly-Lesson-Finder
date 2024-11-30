@@ -43,7 +43,7 @@
 
 1. Search by week number to see what topics are covered across grades.
 2. Search by grade to view the specific lessons for that grade and week.
-3. Navigate results and use the "Back to Home" button to return to the search page.
+3. Navigate results and use the "Back to Search" button to return to the search page.
 
 ## Contributing
 
