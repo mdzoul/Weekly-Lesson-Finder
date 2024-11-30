@@ -9,11 +9,12 @@
 <body>
     <div class="container">
         <h1>Weekly Lesson Finder</h1>
-        <form action="/search" method="get">
+        <form id="search-form">
             <label for="query">Enter your search:</label>
-            <input type="text" id="query" name="query" placeholder="Enter week, grade, topic, or code"><br><br>
-            <input type="submit" value="Search">
+            <input type="text" id="query" name="query" placeholder="Enter a week number, grade (e.g., 'Grade 3'), topic, or code" required>
+            <button type="submit">Search</button>
         </form>
+        <div id="results" class="results"></div>
     </div>
 
     <div class="about-section">
@@ -21,5 +22,46 @@
         <p>This project is developed by a science teacher who loves to code and aims to simplify lesson planning for educators. The Weekly Lesson Finder is a personal project designed to make lesson planning more efficient and organized.</p>
         <p>Learn more about the app and its creator by visiting the <a href="/readme">About Page</a>.</p>
     </div>
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const query = document.getElementById('query').value;
+            const encodedQuery = encodeURIComponent(query);
+            const resultsContainer = document.getElementById('results');
+
+            resultsContainer.innerHTML = '';
+
+            fetch(`/api/search?query=${encodedQuery}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        resultsContainer.innerHTML = `<p>${data.error}</p>`;
+                    } else if (data.length > 0) {
+                        data.forEach(item => {
+                            const div = document.createElement('div');
+                            div.className = 'result-item';
+                            div.innerHTML = `
+                                <hr>
+                                <h3>${item.Grade} - Week ${item['Week Number']}</h3>
+                                <p><strong>Topic:</strong> ${item.Topic}</p>
+                                <p><strong>Code:</strong> ${item.Code}</p>
+                                <p><strong>Lesson Title:</strong> ${item['Lesson Title']}</p>
+                                <p><strong>Objective:</strong> ${item.Objective}</p>
+                                <p><strong>Content:</strong> ${item.Content}</p>
+                                <p><strong>Type of Activity:</strong> ${item['Type of Activity']}</p>
+                                <p><strong>Activities:</strong> ${item.Activities}</p>
+                            `;
+                            resultsContainer.appendChild(div);
+                        });
+                    } else {
+                        resultsContainer.innerHTML = '<p>No matching records found.</p>';
+                    }
+                })
+                .catch(error => {
+                    resultsContainer.innerHTML = `<p>An error occurred: ${error.message}</p>`;
+                });
+        });
+    </script>
 </body>
 </html>
