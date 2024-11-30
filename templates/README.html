@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Weekly Lesson Finder</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Weekly Lesson Finder</h1>
+    <p><strong>Weekly Lesson Finder</strong> is a web application designed to help educators and curriculum specialists quickly find and access weekly lesson plans. The tool is ideal for simplifying lesson planning and improving organization.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Search lesson plans by <strong>week number</strong>, <strong>grade</strong> (Grades 3 to 6), <strong>topic</strong>, or <strong>code</strong>.</li>
+        <li>View detailed lesson information including objectives, topics, activities, and more.</li>
+        <li>User-friendly interface with intuitive navigation.</li>
+        <li>Built using <strong>Flask</strong> for the backend and <strong>HTML/CSS</strong> for the frontend.</li>
+    </ul>
+
+    <h2>Installation</h2>
+    <ol>
+        <li>Clone the repository:
+            <pre>git clone https://github.com/mdzoul/weekly-lesson-finder.git
+cd weekly-lesson-finder</pre>
+        </li>
+        <li>Install dependencies:
+            <pre>pip install flask pandas</pre>
+        </li>
+        <li>Run the Flask app:
+            <pre>python app.py</pre>
+        </li>
+        <li>Open your browser and navigate to:
+            <pre>http://127.0.0.1:5000</pre>
+        </li>
+    </ol>
+
+    <h2>Usage</h2>
+    <ol>
+        <li><strong>Search Options</strong>: Use the search bar to enter a week number, grade (e.g., "Grade 3"), topic, or code to find relevant lesson plans.</li>
+        <li><strong>View Results</strong>: Results will display the grade, week number, topic, code, lesson title, objectives, content, type of activity, and activities.</li>
+        <li><strong>Navigation</strong>: Use the "Back to Search" button to return to the search page after viewing results.</li>
+    </ol>
+
+    <h2>File Structure</h2>
+    <ul>
+        <li><code>/static/css/styles.css</code>: Contains the CSS styles for the application.</li>
+        <li><code>/templates/</code>: Contains all HTML templates used by the application, such as the main search page and results page.</li>
+        <li><code>/app.py</code>: The main application file that handles routing and data processing.</li>
+        <li><code>/gradeX.csv</code>: CSV files containing lesson data for each grade (Grade 3 to Grade 6).</li>
+    </ul>
+
+    <h2>About the Creator</h2>
+    <p>This project is developed by a science teacher who loves to code and aims to simplify lesson planning for educators. The Weekly Lesson Finder is a personal project designed to make lesson planning more efficient and organized.</p>
+
+    <h2>Contributing</h2>
+    <p>Contributions are welcome! If you have suggestions for improvements or additional features, feel free to create a pull request or open an issue.</p>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

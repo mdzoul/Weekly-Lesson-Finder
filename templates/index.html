@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson Plan Search</title>
+    <title>Weekly Lesson Finder</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Search Lesson Plans</h1>
+        <h1>Weekly Lesson Finder</h1>
         <form action="/search" method="get">
-            <label for="week">Week:</label>
-            <input type="text" id="week" name="week"><br><br>
-            <label for="grade">Grade:</label>
-            <input type="text" id="grade" name="grade"><br><br>
-            <label for="topic">Topic:</label>
-            <input type="text" id="topic" name="topic"><br><br>
-            <label for="code">Code:</label>
-            <input type="text" id="code" name="code"><br><br>
+            <label for="query">Enter your search:</label>
+            <input type="text" id="query" name="query" placeholder="Enter week, grade, topic, or code"><br><br>
             <input type="submit" value="Search">
         </form>
+    </div>
+
+    <div class="about-section">
+        <h2>About the Creator</h2>
+        <p>This project is developed by a science teacher who loves to code and aims to simplify lesson planning for educators. The Weekly Lesson Finder is a personal project designed to make lesson planning more efficient and organized.</p>
+        <p>Learn more about the app and its creator by visiting the <a href="/readme">About Page</a>.</p>
     </div>
 </body>
 </html>

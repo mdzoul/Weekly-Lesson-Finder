@@ -1,6 +1,30 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+h1, h2 {
+    color: #333;
+}
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+ul, ol {
+    margin: 0;
+    padding-left: 20px;
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+a:hover {
+    text-decoration: underline;
 }
 
 .container {
@@ -44,6 +68,14 @@ body {
 
 .back-button:hover {
     background-color: #0056b3;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 hr.dotted {
