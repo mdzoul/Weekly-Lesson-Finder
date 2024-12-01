@@ -5,8 +5,9 @@ body {
     margin: 20px auto;
     padding: 20px;
 }
-h1, h2 {
+h1, h2, h3 {
     color: #333;
+    text-align: center;
 }
 pre {
     background-color: #f4f4f4;
@@ -25,6 +26,12 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
 }
 
 .container {
@@ -78,14 +85,15 @@ a:hover {
     border-radius: 5px;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-}
-
 .result-item {
     padding: 10px 0;
 }
   
-  
+#query {
+    width: 100%; /* Adjust width to fill the container */
+    max-width: 500px; /* Optional: Limit maximum width */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+}
